@@ -1,0 +1,8 @@
+# macOS metadata
+.DS_Store
+
+# Original archive; exceeds GitHub's 100 MiB file-size limit
+/80h5.zip
+
+# Local API request example containing credentials
+/80h5/test
