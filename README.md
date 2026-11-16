@@ -4,6 +4,12 @@
 
 ## 在线体验
 
+[打开 H5 小游戏合集](https://adrianandroid.github.io/80-html5-mini-games/)
+
+`main` 分支更新后，GitHub Actions 会自动将 `80h5` 目录部署到 GitHub Pages。
+
+## 本地运行
+
 无需安装依赖或构建项目。在本目录运行：
 
 ```bash
