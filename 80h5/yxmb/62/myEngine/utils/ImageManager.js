@@ -24,14 +24,14 @@
          * @param {Array} images @format {id: '', src: ''}
          * @param {Function} statechange
          */
-        load : function(images, statechange, __index) {
-            __index = __index || 0;
-            if(images[__index]) {
-                ImageManager.__loadImage(images[__index], function() {
-                    ImageManager.load(images, statechange, __index + 1);
+        load : function(images, statechange) {
+            var loaded = 0;
+            statechange(loaded);
+            images.forEach(function(item) {
+                ImageManager.__loadImage(item, function() {
+                    statechange(++loaded);
                 });
-            }
-            statechange(__index);
+            });
         },
         /**
          * 获取已加载的Image对象
