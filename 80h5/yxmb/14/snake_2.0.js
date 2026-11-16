@@ -28,7 +28,7 @@
     //游戏设置 属性变更
     let setGame = {
         speed: 200,
-        gameBGImg: 'url(./images/gameBGImg1.jpg)'
+        gameBGImg: 'url(./images/gameBGImg1.png)'
     };
     let speedClass = document.getElementsByClassName('speed');
     speedClass[0].setAttribute('checked','true');

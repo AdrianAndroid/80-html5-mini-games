@@ -27,6 +27,8 @@ function addClass(element, new_name) {
     }
 var orderId = null;
 $(function() {
+    // The splash page shares this script but does not contain the gameplay DOM.
+    if (!document.getElementById("gameStage")) return;
     $(".close").on("click",function(){
         if (window.isH5) {
             window.history.go(-1);

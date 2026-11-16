@@ -211,7 +211,8 @@ var gameMonitor = {
 			});
 		});
 
-		WeixinApi.ready(function(Api) {   
+		if (typeof WeixinApi !== 'undefined' && typeof WeixinApi.ready === 'function') {
+			WeixinApi.ready(function(Api) {
             // 微信分享的数据
             //分享给好友的数据
             var wxData = {
@@ -249,7 +250,8 @@ var gameMonitor = {
             Api.shareToTimeline(wxDataPyq, wxCallbacks);
             // 点击分享到腾讯微博，会执行下面这个代码
             Api.shareToWeibo(wxData, wxCallbacks);
-        });
+			});
+		}
 
 	},
 	rollBg : function(ctx){

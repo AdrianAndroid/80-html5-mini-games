@@ -661,6 +661,15 @@ class Labirynthe {
 		img.onload = function() {
 			self.chargement();
 		}
+		img.onerror = function() {
+			self.ctx.fillStyle = 'white';
+			self.ctx.fillRect(0, 0, self.L, self.H);
+			self.ctx.fillStyle = '#b00020';
+			self.ctx.textAlign = 'center';
+			self.ctx.font = '16px Arial';
+			self.ctx.fillText('图片加载失败，请刷新重试', self.L / 2, self.H / 2);
+			console.error('无法加载游戏图片: ' + url);
+		}
 		img.src = url;
 		return img;
 	}
@@ -979,13 +988,13 @@ class Labirynthe {
            ],
 
        packImages: [
-       {img:"http://image.noelshack.com/fichiers/2017/04/1485167646-bille.png",nom:"bille",l:800,h:40,ligne:1,sep:20,allure:0.15},
-       {img:"http://image.noelshack.com/fichiers/2017/04/1485167646-pikkux.png",nom:"pikkux",l:160,h:40,ligne:1,sep:4,allure:0.15},
-       {img:"http://image.noelshack.com/fichiers/2017/04/1485167646-pikkuy.png",nom:"pikkuy",l:160,h:40,ligne:1,sep:4,allure:0.15},
-       {img:"http://image.noelshack.com/fichiers/2017/04/1485167646-feuille.gif",nom:"feuille"},
-       {img:"http://image.noelshack.com/fichiers/2017/04/1485167646-herbe.png",nom:"herbe"},
-       {img:"http://image.noelshack.com/fichiers/2017/04/1485167646-sortie.png",nom:"sortie",l:400,h:40,ligne:1,sep:9},
-       {img:"http://image.noelshack.com/fichiers/2017/04/1485167646-piece.png",nom:"piece",l:400,h:40,ligne:1,sep:10},
+       {img:"images/bille.png",nom:"bille",l:800,h:40,ligne:1,sep:20,allure:0.15},
+       {img:"images/pikkux.png",nom:"pikkux",l:160,h:40,ligne:1,sep:4,allure:0.15},
+       {img:"images/pikkuy.png",nom:"pikkuy",l:160,h:40,ligne:1,sep:4,allure:0.15},
+       {img:"images/feuille.gif",nom:"feuille"},
+       {img:"images/herbe.png",nom:"herbe"},
+       {img:"images/sortie.png",nom:"sortie",l:400,h:40,ligne:1,sep:9},
+       {img:"images/piece.png",nom:"piece",l:400,h:40,ligne:1,sep:10},
            ],
     }
 

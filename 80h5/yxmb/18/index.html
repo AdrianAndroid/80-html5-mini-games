@@ -171,7 +171,7 @@
         num++;
   //显示得分
         count.innerHTML = '当前得分: ' + num;
-        bgm.play();
+        if (typeof bgm !== 'undefined') { bgm.play(); }
         }
         else{
   //游戏结束
@@ -190,7 +190,7 @@
     }
   //松开触发停止
     obj.onmouseup=function(event){
-      bgm.pause();
+      if (typeof bgm !== 'undefined') { bgm.pause(); }
     }
   },20) 
     }

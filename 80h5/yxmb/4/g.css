@@ -75,7 +75,7 @@ position:absolute;width:900px;height:50px;top:500px;left:0;z-index:100;text-alig
 #imgSF{position:absolute;cursor:pointer;z-index:256}
 #PointerUD{position:absolute;z-index:50}
 #dTitle{visibility:hidden;position:absolute;background-color:#FFD;width:180px;font-size:12px;text-align:center;line-height:1.5;border:1px solid #000;padding:3px;z-index:254}
-#dAll{background:url('new_skin/back.jpg')}
+#dAll{background:#000}
 #dAll img,#dFlagMeter img,#dHandBookPCard img{position:absolute;border-style:none}
 #dPZ{position:absolute}
 #dFog{position:absolute;left:1290px;top:10px;height:600px;width:800px;z-index:24}
